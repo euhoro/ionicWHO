@@ -64,7 +64,7 @@
     "@capacitor/cli": "1.5.1",
     "@types/dompurify": "^2.0.1",
     "@types/js-yaml": "^3.12.2",
-    "gts": "^1.1.2",
+    "gts": "^2.0.0",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8"
   },
