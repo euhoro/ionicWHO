@@ -29,7 +29,8 @@
     "react-scripts": "3.4.0",
     "survey-react": "^1.5.16",
     "tachyons": "^4.10.0",
-    "typescript": "3.7.4"
+    "typescript": "3.7.4",
+    "snyk": "^1.316.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -40,10 +41,11 @@
     "cleanbuild": "gts clean",
     "compile": "tsc -p .",
     "fix": "gts fix",
-    "prepare": "npm run compile",
+    "prepare": "npm run snyk-protect && npm run compile",
     "pretest": "npm run compile",
     "posttest": "npm run check",
-    "i18n": "node scripts/generate-i18n.js"
+    "i18n": "node scripts/generate-i18n.js",
+    "snyk-protect": "snyk protect"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -78,5 +80,6 @@
     "*.{json,ts,tsx}": [
       "gts check"
     ]
-  }
+  },
+  "snyk": true
 }
